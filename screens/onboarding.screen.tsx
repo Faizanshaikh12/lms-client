@@ -2,6 +2,7 @@ import { styles } from "@/styles/onboaring/onboard";
 import { Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/nunito";
 import { useFonts, Raleway_700Bold } from "@expo-google-fonts/raleway";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function OnBoardingScreen() {
@@ -58,7 +59,7 @@ export default function OnBoardingScreen() {
                         video, quizze and assignment.
                     </Text>
                 </View>
-                <TouchableOpacity style={styles.buttonWrapper}>
+                <TouchableOpacity style={styles.buttonWrapper} onPress={() => router.push("/(routes)/welcome-intro")}>
                     <Text style={[styles.buttonText, { fontFamily: "Nunito_700Bold" }]}>
                         Getting Started
                     </Text>
